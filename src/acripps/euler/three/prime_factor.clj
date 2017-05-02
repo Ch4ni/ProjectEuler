@@ -26,7 +26,7 @@
     (let [primes (get-primes (get-division-threshold x))
           primes-above (drop-while #(if (= 1 %) true (not (divides? % x))) primes)
           lowest-factor (first primes-above)
-          highest-factor (/ x lowest-factor)
+          highest-factor (quot x lowest-factor)
           ]
       (if (is-prime? highest-factor)
         (into result [lowest-factor highest-factor])
