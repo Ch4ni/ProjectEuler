@@ -16,5 +16,6 @@
              (fib/sum even? (partial <= 100)) => 44)
        (fact "all the odd numbers below 100 sum to 188"
              (fib/sum (complement even?) (partial <= 100)) => 188)
+       ;; NOTE: this is the answer to the exercise
        (fact "the sum of all even numbered terms below 4 million is 4613732"
              (fib/sum even? (partial <= 4000000)) => 4613732))
