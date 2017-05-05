@@ -19,3 +19,12 @@
              (p/palindrome? "ao") => false)
        (fact "the string \"a man a plan a canal panama\" is a palindrome"
              (p/palindrome? "a man a plan a canal panama") => true))
+
+(facts "About get-multiples"
+       ;; I've got nothing yet
+       ;; TODO: design an algorithm that will multiply pairs below two given values in descending order of the product
+       )
+
+(facts "About largest palindrome under"
+       (fact "9009 is the largest palindrome under 99 x 99"
+             (p/largest-palindrome-under 99 99) => 9009))
