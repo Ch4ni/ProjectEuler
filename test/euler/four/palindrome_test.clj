@@ -20,11 +20,16 @@
        (fact "the string \"a man a plan a canal panama\" is a palindrome"
              (p/palindrome? "a man a plan a canal panama") => true))
 
-(facts "About get-multiples"
-       ;; I've got nothing yet
-       ;; TODO: design an algorithm that will multiply pairs below two given values in descending order of the product
-       )
+(facts "about next-product"
+       (fact "the first product will be the square"
+             (first (p/next-product 5 5)) => 25)
+       (fact "the second product will be (* x (dec y))"
+             (last (take 2 (p/next-product 5 5))) => 20)
+       (fact "we will eventually hit negative numbers"
+             (some #(= -5 %) (take 100 (p/next-product 5 5))) => true))
 
 (facts "About largest palindrome under"
        (fact "9009 is the largest palindrome under 99 x 99"
-             (p/largest-palindrome-under 99 99) => 9009))
+             (p/largest-palindrome-under 99 99) => 9009)
+       (fact "906609 is the largest palindrome under (* 999 999"
+             (p/largest-palindrome-under 999 999) => 906609))
