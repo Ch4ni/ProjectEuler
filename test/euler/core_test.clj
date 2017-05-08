@@ -22,4 +22,4 @@
        (fact "1 is not negative"
              (c/negative? 1) => false)
        (fact "-1 is negative"
-             (c/negative -1) => true))
+             (c/negative? -1) => true))
