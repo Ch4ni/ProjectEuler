@@ -5,7 +5,7 @@
   [x coll]
   (every? #(divides? % x) coll))
 
-(defn smallest-divisible
+(defn- smallest-divisible
   [coll1 coll2]
   (let [filtered (filter #(all-divide? % coll1) coll2)]
     (if ((complement empty?) filtered)
@@ -18,10 +18,10 @@
      (smallest-multiple smallest-direct coll)))
   ([x coll]
    (loop [result x]
-     (let [divided (map (partial quot x) coll)
-           smol (smallest-divisible coll divided)]
-       ;; FIX: This is *NOT* correctly detecting the completion boundary ... programmer error
-       (println "x: " x ", smol: " smol)
-       (if (= x smol)
-         smol
-         (recur smol))))))
+     (let [divisions (map (partial quot result) coll)
+           still-divisible (filter #(all-divide? % coll) divisions)
+           num-divisible (count still-divisible)]
+       (condp = num-divisible
+         0 x
+         1  (first still-divisible)
+         (recur (apply min still-divisible)))))))
