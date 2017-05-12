@@ -14,5 +14,5 @@
 (facts "About smallest-multiple"
        (fact "The smallest multiple of [1 2 3 4 5 6 7 8 9 10] is 2520"
              (s/smallest-multiple (range 1 11)) => 2520)
-       (fact "The smallest multiple of (range 1 21) is ?"
-             (s/smallest-multiple (range 1 21)) => nil))
+       (fact "The smallest multiple of (range 1 21) is 232792560" ;; This is the solution to the problem
+             (s/smallest-multiple (range 1 21)) => 232792560))
