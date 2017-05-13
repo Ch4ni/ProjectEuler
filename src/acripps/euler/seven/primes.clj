@@ -1,6 +1,6 @@
 (ns acripps.euler.seven.primes
-  (:require [acripps.euler.three.prime-factor :as pf]))
+  (:require [acripps.euler.core :as c]))
 
 (defn get-primes
   ""
-  ([] (filter pf/is-prime? (drop 2 (range)))))
+  ([] (filter c/is-prime? (drop 2 (range)))))

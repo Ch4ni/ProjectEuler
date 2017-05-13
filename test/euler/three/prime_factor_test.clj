@@ -2,17 +2,7 @@
   (:use midje.sweet)
   (:require [acripps.euler.three.prime-factor :as prime]))
 
-(facts "about is-prime?"
-       (fact "one is not a prime number"
-             (prime/is-prime? 1) => false)
-       (fact "two is a prime number"
-             (prime/is-prime? 2) => true)
-       (fact "three is a prime number"
-             (prime/is-prime? 3) => true)
-       (fact "four is not a prime number"
-             (prime/is-prime? 4) => false)
-       (fact "five is a prime number"
-             (prime/is-prime? 5) => true))
+
 
 (facts "about get-primes"
        (fact "returns a list of primes below the given number"
