@@ -9,14 +9,14 @@
 (defn is-prime?
   [x]
   (condp = x
-    1 true
+    1 false
     2 true
     (empty? (filter #(divides? % x) (range 2 (get-division-threshold x))))))
 
 (defn get-primes
   "get all primes (except one) less than x"
   [x]
-  (into [] (sort (cons 1 (filter is-prime? (range 2 x))))))
+  (into [] (sort (filter is-prime? (drop 2 (range x))))))
 
 
 (defn get-factors
