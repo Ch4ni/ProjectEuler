@@ -16,10 +16,3 @@
 (defn lowest-factor-max
   [x]
   (-> x math/sqrt math/ceil inc))
-
-(defn is-prime?
-  [x]
-  (condp = x
-    1 false
-    2 true
-    (empty? (filter #(divides? % x) (range 2 (lowest-factor-max x))))))

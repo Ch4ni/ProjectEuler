@@ -1,6 +1,6 @@
 (ns acripps.euler.problems.p007.primes
-  (:require [acripps.euler.math.core :as c]))
+  (:require [acripps.euler.math.prime :as p]))
 
-(defn get-primes
-  ""
-  ([] (filter c/is-prime? (drop 2 (range)))))
+(defn nth-prime
+  [n]
+  (last (take n (p/get-primes))))

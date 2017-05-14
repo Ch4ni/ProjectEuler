@@ -1,11 +1,12 @@
 (ns acripps.euler.problems.p003.prime-factor
   (:require [acripps.euler.math.core :as c]
+            [acripps.euler.math.prime :as p]
             [clojure.math.numeric-tower :as math]))
 
-(defn get-primes
-  "get all primes (except one) less than x"
+(defn primes-under
+  "get all primes less than x"
   [x]
-  (into [] (sort (filter c/is-prime? (drop 2 (range x))))))
+  (take-while (partial < x) (p/get-primes)))
 
 
 (defn get-factors
@@ -15,8 +16,7 @@
     (let [primes (get-primes (c/lowest-factor-max x))
           primes-above (drop-while #(if (= 1 %) true (not (c/divides? % x))) primes)
           lowest-factor (first primes-above)
-          highest-factor (quot x lowest-factor)
-          ]
-      (if (c/is-prime? highest-factor)
+          highest-factor (quot x lowest-factor)]
+      (if (p/is-prime? highest-factor)
         (into result [lowest-factor highest-factor])
         (recur highest-factor (conj result lowest-factor))))))
