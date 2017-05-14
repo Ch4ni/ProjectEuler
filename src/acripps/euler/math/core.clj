@@ -1,4 +1,4 @@
-(ns acripps.euler.util.core
+(ns acripps.euler.math.core
   (:require [clojure.math.numeric-tower :as math]))
 
 (defn divides?

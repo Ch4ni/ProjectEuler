@@ -1,5 +1,5 @@
 (ns acripps.euler.problems.p005.smallest-multiple
-  (:require [acripps.euler.util.core :refer [divides?]]))
+  (:require [acripps.euler.math.core :refer [divides?]]))
 
 (defn all-divide?
   [x coll]

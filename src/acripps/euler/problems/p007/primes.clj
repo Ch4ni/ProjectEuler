@@ -1,5 +1,5 @@
 (ns acripps.euler.problems.p007.primes
-  (:require [acripps.euler.util.core :as c]))
+  (:require [acripps.euler.math.core :as c]))
 
 (defn get-primes
   ""

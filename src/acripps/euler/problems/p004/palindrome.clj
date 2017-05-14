@@ -1,6 +1,6 @@
 (ns acripps.euler.problems.p004.palindrome
   (:require [clojure.string :as s]
-            [acripps.euler.util.core :as c]))
+            [acripps.euler.math.core :as c]))
 
 (defn palindrome?
   "takes a string as an argument and determines whether or not it is a palindrome"

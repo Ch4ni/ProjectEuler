@@ -1,6 +1,6 @@
-(ns acripps.euler.util.core-test
+(ns acripps.euler.math.core-test
   (:use midje.sweet)
-  (:require  [acripps.euler.util.core :as c]))
+  (:require  [acripps.euler.math.core :as c]))
 
 (facts "about divides?"
        (fact "returns true when one number divides another"

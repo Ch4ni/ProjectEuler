@@ -1,5 +1,5 @@
 (ns acripps.euler.problems.p003.prime-factor
-  (:require [acripps.euler.util.core :as c]
+  (:require [acripps.euler.math.core :as c]
             [clojure.math.numeric-tower :as math]))
 
 (defn get-primes

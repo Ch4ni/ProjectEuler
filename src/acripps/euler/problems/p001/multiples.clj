@@ -1,5 +1,5 @@
 (ns acripps.euler.problems.p001.multiples
-  (:require [acripps.euler.util.core :refer [divides?]]))
+  (:require [acripps.euler.math.core :refer [divides?]]))
 
 (defn get-multiples
   "given a collection, return the collation that are multiples of x"
