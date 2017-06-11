@@ -32,4 +32,4 @@
        (fact "The four adjacent digits that have the largest product are  9989 => 5832"
              (euler.problems.p008/max-adjacent-product sequence-digits 4) => 5832)
        (fact "The 13 adjacent digits that have the largest product are ? => ?"
-             (euler.problems.p008/max-adjacent-product sequence-digits 13) => nil))
+             (euler.problems.p008/max-adjacent-product sequence-digits 13) => 23514624000))
