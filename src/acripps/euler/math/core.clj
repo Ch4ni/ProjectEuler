@@ -1,5 +1,5 @@
 (ns acripps.euler.math.core
-  (:require [clojure.math.numeric-tower :as math]))
+  (:require [clojure.math.numeric-tower :as math.numeric-tower]))
 
 (defn divides?
   "does x divide y with 0 remainder?"
@@ -15,4 +15,8 @@
 
 (defn lowest-factor-max
   [x]
-  (-> x math/sqrt math/ceil inc))
+  (-> x math.numeric-tower/sqrt math.numeric-tower/ceil inc))
+
+(defn square
+  [x]
+  (* x x))
